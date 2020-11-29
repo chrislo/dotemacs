@@ -107,7 +107,6 @@
 
 (use-package vterm :straight t)
 (use-package vterm-toggle :straight t)
-(use-package exec-path-from-shell :straight t)
 (use-package rspec-mode :straight t)
 
 (use-package markdown-mode
@@ -141,7 +140,7 @@
   (yas-global-mode 1))
 
 (use-package exec-path-from-shell
-  :ensure t
+  :straight t
   :if (memq window-system '(mac ns x))
   :config
   (setq exec-path-from-shell-variables '("PATH"))
