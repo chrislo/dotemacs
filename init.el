@@ -56,9 +56,6 @@
   (load-theme 'doom-one-light t)
   (doom-themes-visual-bell-config))
 
-(use-package smart-mode-line-powerline-theme
-  :straight t)
-
 (use-package ripgrep :straight t)
 (use-package dumb-jump
   :straight t
