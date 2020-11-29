@@ -151,6 +151,7 @@
 (define-key vterm-mode-map (kbd "<f1>") 'vterm-toggle)
 (global-set-key (kbd "<f2>") 'dired)
 (global-set-key (kbd "<f9>") 'org-roam-dailies-find-today)
+(global-set-key (kbd "S-<f9>") 'org-roam-dailies-date)
 (global-set-key (kbd "<f10>") 'magit)
 
 (global-set-key (kbd "C-;") 'backward-kill-word)
