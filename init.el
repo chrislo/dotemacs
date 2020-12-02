@@ -151,7 +151,7 @@
 (global-set-key (kbd "<f10>") 'magit)
 
 (global-set-key (kbd "C-;") 'backward-kill-word)
-(global-set-key (kbd "C-c ;") 'comment-line)
+(global-set-key (kbd "C-c c") 'comment-line)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (defun my/insert-hash () (interactive) (insert "#"))
