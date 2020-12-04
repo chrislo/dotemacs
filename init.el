@@ -105,6 +105,9 @@
 (use-package vterm :straight t)
 (use-package vterm-toggle :straight t)
 (use-package rspec-mode :straight t)
+(use-package haml-mode :straight t)
+(use-package yaml-mode :straight t)
+(use-package haskell-mode :straight t)
 
 (use-package markdown-mode
   :straight t
