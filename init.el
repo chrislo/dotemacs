@@ -102,8 +102,16 @@
 	ivy-count-format "%d/%d ")
   (ivy-mode 1))
 
-(use-package vterm :straight t)
-(use-package vterm-toggle :straight t)
+(use-package vterm
+  :straight t
+  :if (memq window-system '(mac ns x))
+  )
+(use-package vterm-toggle
+  :straight t
+  :if (memq window-system '(mac ns x))
+  :bind (:map vterm-mode-map
+	      (("<f1>" . vterm-toggle))))
+
 (use-package rspec-mode :straight t)
 (use-package haml-mode :straight t)
 (use-package yaml-mode :straight t)
@@ -118,6 +126,7 @@
   :init (setq markdown-command "multimarkdown"))
 
 (use-package org-roam
+  :if (memq window-system '(mac ns x))
   :diminish
   :straight t
   :hook
@@ -146,8 +155,12 @@
   (setq exec-path-from-shell-variables '("PATH"))
   (exec-path-from-shell-initialize))
 
-(global-set-key (kbd "<f1>") 'vterm-toggle)
-(define-key vterm-mode-map (kbd "<f1>") 'vterm-toggle)
+(cond
+   ((string-equal system-type "gnu/linux")
+    (global-set-key (kbd "<f1>") 'eshell))
+   ((string-equal system-type "darwin")
+    (global-set-key (kbd "<f1>") 'vterm-toggle)))
+
 (global-set-key (kbd "<f2>") 'dired)
 (global-set-key (kbd "<f9>") 'org-roam-dailies-find-today)
 (global-set-key (kbd "S-<f9>") 'org-roam-dailies-date)
