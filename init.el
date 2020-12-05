@@ -116,6 +116,7 @@
 (use-package haml-mode :straight t)
 (use-package yaml-mode :straight t)
 (use-package haskell-mode :straight t)
+(use-package tidal :straight f :load-path "vendor/")
 
 (use-package markdown-mode
   :straight t
