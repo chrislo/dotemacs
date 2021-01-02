@@ -43,6 +43,7 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (add-hook 'before-save-hook 'whitespace-cleanup)
+(setq ruby-insert-encoding-magic-comment nil)
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
