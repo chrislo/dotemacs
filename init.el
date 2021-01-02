@@ -103,6 +103,11 @@
 	ivy-count-format "%d/%d ")
   (ivy-mode 1))
 
+(use-package counsel
+  :diminish
+  :straight t
+  )
+
 (use-package vterm
   :straight t
   :if (memq window-system '(mac ns x))
