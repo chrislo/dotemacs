@@ -170,6 +170,7 @@
 
 (global-set-key (kbd "C-;") 'backward-kill-word)
 (global-set-key (kbd "C-c c") 'comment-line)
+(global-set-key (kbd "C-c o") 'occur)
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (defun my/insert-hash () (interactive) (insert "#"))
